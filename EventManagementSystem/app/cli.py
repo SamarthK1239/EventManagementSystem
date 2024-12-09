@@ -1,13 +1,13 @@
 import sys
-from app.database import Database
-from app.services.user_service import UserService
-from app.services.event_service import EventService
-from app.services.attendee_service import AttendeeService
-from app.services.schedule_service import ScheduleService
-from app.services.venue_service import VenueService
-from app.services.vendor_service import VendorService
-from app.services.transaction_service import TransactionService
-from app.services.feedback_service import FeedbackService
+from EventManagementSystem.app.database import Database
+from EventManagementSystem.app.services.user_service import UserService
+from EventManagementSystem.app.services.event_service import EventService
+from EventManagementSystem.app.services.attendee_service import AttendeeService
+from EventManagementSystem.app.services.schedule_service import ScheduleService
+from EventManagementSystem.app.services.venue_service import VenueService
+from EventManagementSystem.app.services.vendor_service import VendorService
+from EventManagementSystem.app.services.transaction_service import TransactionService
+from EventManagementSystem.app.services.feedback_service import FeedbackService
 
 
 class EventManagementCLI:
@@ -308,9 +308,7 @@ class EventManagementCLI:
             if isinstance(report, str):
                 print(report)  # Error message
             else:
-                print(f"Total Income: {report['TotalIncome']}")
                 print(f"Total Expenses: {report['TotalExpenses']}")
-                print(f"Net Profit: {report['NetProfit']}")
         else:
             print("Invalid choice. Please try again.")
 

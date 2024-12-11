@@ -36,7 +36,10 @@ class ScheduleService:
             # Check for time conflicts in the same room
             if room:
                 existing_schedules = self.schedule_model.get_schedule_by_event(event_id)
+                print(existing_schedules)
                 for schedule in existing_schedules:
+                    if type(existing_schedules) is str:
+                        break
                     if schedule["Room"] == room and (
                             (schedule["StartTime"] <= start_time < schedule["EndTime"]) or
                             (schedule["StartTime"] < end_time <= schedule["EndTime"])

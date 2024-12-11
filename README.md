@@ -32,7 +32,8 @@ CREATE TABLE User (
     FirstName VARCHAR(100) NOT NULL,
     LastName VARCHAR(100) NOT NULL,
     Email VARCHAR(255) UNIQUE NOT NULL,
-    Role ENUM('admin', 'organizer') DEFAULT 'organizer'
+    Role ENUM('admin', 'organizer') DEFAULT 'organizer',
+    Password VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE Venue (

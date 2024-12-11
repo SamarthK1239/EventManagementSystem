@@ -50,7 +50,7 @@ CREATE TABLE Event (
     UserID INT,
     EventName VARCHAR(255) NOT NULL,
     EventDate DATE NOT NULL,
-    EventVenue INT,  -- Assuming this references VenueID
+    EventVenue INT,
     MaxAttendees INT DEFAULT 0,
     Budget DECIMAL(10,2) DEFAULT 0.00,
     FOREIGN KEY (UserID) REFERENCES User(UserID),
